@@ -1,5 +1,5 @@
 #+title: Git & Version Control
-#+options: toc:nil num:nil reveal_title_slide:nil
+#+options: toc:nil num:nil
 #+reveal_theme: night
 #+reveal_init_options: transition: 'concave'
 #+reveal_root: https://cdn.jsdelivr.net/npm/reveal.js
@@ -17,7 +17,7 @@ the practice of tracking and managing changes to software code
 filename-based \\
 [[./img/bad-vc.png]]
 
-#+REVEAL: split:t
+#+REVEAL: split
 unnecessary comments in code \\
 #+begin_src cpp
 for (int i = 1; i < Ntr; i++) {
@@ -48,7 +48,8 @@ for (int i = 1; i < Ntr; i++) {
 * what is ~git~?
 ~git~ is a *good* version control tool
 
-it is a /command line utility/
+it is a /command line utility/ \\
+(but can be used via GUI clients)
 
 * installing ~git~
 download from https://git-scm.com/downloads
@@ -72,24 +73,23 @@ $ git config --global user.name "Your Name"
 $ git config --global user.email "youremail@domain.com"
 #+END_SRC
 
-* repository
+* चलिए शुरू करते हैं
+बिना किसी...
+*** make a new repo
+[[./img/git-innit.jpeg]]
+
+#+REVEAL: split
+step by step:
+1. ~mkdir [folder_name]~
+2. ~cd [folder_name]~
+3. ~git init~
+
+#+REVEAL: split
+**** repository "repo"
 a folder containing your code
 
 every git repo contains a ~.git~ folder \\
 it stores *all* of your changes, don't mess with it (manually)
-
-*** make a new repo
-#+BEGIN_SRC shell
-$ git init
-#+END_SRC
-
-*inside an empty directory
-
-#+REVEAL: split
-step by step:
-1. ~$ mkdir [folder_name]~
-2. ~$ cd [folder_name]~
-3. ~$ git init~
 
 *** use an existing repo
 #+BEGIN_SRC shell
@@ -104,40 +104,35 @@ $ git clone [path] [destination]
 
 clones the repo at /destination/
 
-#+REVEAL: split:t
-/path/ can be:
-- a repository on your computer
+#+REVEAL: split
+/path/ is usually a git repo link:
 
+- a link to a remote repo
+  #+BEGIN_SRC shell
+$ git clone https://github.com/github/training-kit.git
+#+END_SRC
+
+- it can also be a repository on your computer
   #+BEGIN_SRC shell
 $ git clone ./path-to-existing-repo ./new-clone
 #+END_SRC
 
-#+REVEAL: split:t
-- a link to a remote repo
-
-  #+BEGIN_SRC shell
-$ git clone https://github.com/github/training-kit.git
-#+END_SRC
-  *clones to ./training-kit
-
 * git commands
 ** terminal command syntax
 #+BEGIN_EXPORT html
-<p><code>command</code> <code class="fragment">subcommand</code> <code class="fragment">-o</code> <code class="fragment">--option</code></p>
+<p><code class="fragment">git</code> <code class="fragment">[subcommand]</code> <code class="fragment">[options]</code></p>
 #+END_EXPORT
-
-#+ATTR_REVEAL: :frag roll-in
-~git~ ~[subcommand]~ ~[options]~
 
 ** git status
 tells you the status of your repository
 
 *can tell you what to do next
 
-*** staging
-collect related changes, put them on a *stage*
-*** commit
-document these changes file-by-file, line-by-line
+*** a few important terms
+#+ATTR_REVEAL: :frag t
+- *staging*: collect related changes, put them on a *stage*
+#+ATTR_REVEAL: :frag t
+- *commit*: document these changes file-by-file, line-by-line \\
 
 #+REVEAL: split
 a *commit* stores
@@ -150,9 +145,8 @@ a *commit* stores
 inside the new repo you created with ~git init~, create ~README.md~
 
 #+begin_src shell
-$ touch README.md
+$ echo "Hello world!" > README.md
 #+end_src
-add some content to this file via your text editor, save it.
 
 #+REVEAL: split
 #+begin_src shell
@@ -194,9 +188,6 @@ $ git commit -m "Commit message"
 #+end_src
 will "commit" this change and store it permanently
 
-#+ATTR_REVEAL: :frag roll-in
-*omitting the -m flag launches the default editor chosen by you during Git installation
-
 #+begin_src shell
 [master (root-commit) 04e48d4] Initial Commit
  1 file changed, 3 insertions(+)
@@ -204,7 +195,9 @@ will "commit" this change and store it permanently
 #+end_src
 
 #+REVEAL: split
-running ~git status~ again will tell you the updated status of your repo
+running \\
+~git status~ \\
+again will tell you the updated status of your repo
 
 #+begin_src shell
 on branch master
@@ -220,22 +213,21 @@ nothing to commit, working tree clean
 
 *more parts coming soon!
 
-** more useful commands
+** some useful commands
 *** git rm --cached [file]
 unstages [file]
 
 *** git checkout [file]
 removes unstaged changes
 
-#+REVEAL: split
-~git checkout .~
-
+*** git checkout .
 removes *ALL* unstaged changes
 
-*** git diff
-shows unstaged changes (file-by-file, line-by-line)
+*** how to do *X* in Git?
+https://stackoverflow.com/search?q=how+to+do+X+in+Git
 
-** when & what to commit
+
+* when & what to commit
 #+ATTR_REVEAL: :frag roll-in
 ~git~ is only as good as your /commits/
 
@@ -320,7 +312,8 @@ copy the contents of your local repo to the cloned repo
 you will need to recreate your commits
 
 #+ATTR_REVEAL: :frag roll-in
-the ~.git~ directory stores *ALL* info related to your project, ∴ different ~.git~ == no commit/history
+the ~.git~ directory stores *ALL* info related to your project, \\
+∴ different ~.git~ == no commit/history
 
 #+ATTR_REVEAL: :frag roll-in
 *esp useful when things go wrong
@@ -339,7 +332,7 @@ $ git push -u [remote] [branch]
 #+ATTR_REVEAL: :frag roll-in
 ~git push~ remembers your remote
 
-** git workflow updated:
+** git workflow (updated):
 1. ~$ git fetch~
 2. Create changes (add/edit/remove)
 3. ~$ git status~
@@ -348,6 +341,3 @@ $ git push -u [remote] [branch]
 6. Repeat
 7. ~$ git push~
 
-* TODO What next?
-** Github Student Pack
-* TODO Further resources
