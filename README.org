@@ -3,7 +3,7 @@
 #+reveal_theme: night
 #+reveal_init_options: transition: 'concave'
 #+reveal_root: https://cdn.jsdelivr.net/npm/reveal.js
-#+export_file_name: index
+#+export_file_name: slides/index
 
 * Version Control
 the practice of tracking and managing changes to software code
