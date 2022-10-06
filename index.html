@@ -15,19 +15,19 @@
 <div class="reveal">
 <div class="slides">
 <section id="sec-title-slide">
-<h1 class="title">Git &amp; Version Control</h1><h2 class="author">Seshal Jain</h2><p class="date">Created: 2022-09-22 Thu 00:35</p>
+<h1 class="title">Git &amp; Version Control</h1><h2 class="author">Seshal Jain</h2><p class="date">Created: 2022-10-06 Thu 19:48</p>
 </section>
 
 <section>
-<section id="slide-orgbd3e53f">
-<h2 id="orgbd3e53f">Version Control</h2>
+<section id="slide-org7ff768f">
+<h2 id="org7ff768f">Version Control</h2>
 <p>
 the practice of tracking and managing changes to software code
 </p>
 
 </section>
-<section id="slide-org7ff8344">
-<h3 id="org7ff8344">Why use VC?</h3>
+<section id="slide-orgb650e9b">
+<h3 id="orgb650e9b">Why use VC?</h3>
 <ul>
 <li>undo changes</li>
 <li>simplify collaboration</li>
@@ -36,8 +36,8 @@ the practice of tracking and managing changes to software code
 </ul>
 
 </section>
-<section id="slide-orgc8e61b3">
-<h3 id="orgc8e61b3">Bad version control</h3>
+<section id="slide-orgcfbf478">
+<h3 id="orgcfbf478">Bad version control</h3>
 <p>
 filename-based <br />
 <img src="./img/bad-vc.png" alt="bad-vc.png" />
@@ -50,7 +50,7 @@ unnecessary comments in code <br />
 </p>
 <div class="org-src-container">
 
-<pre class="src src-cpp"><span style="color: #51afef;">for</span> (<span style="color: #FCCE7B;">int</span> <span style="color: #DFDFDF;">i</span> = <span style="color: #e69055; font-weight: bold;">1</span>; i &lt; Ntr; i++) {
+<pre class="src src-cpp"><span style="color: #51afef;">for</span> (<span style="color: #FCCE7B;">int</span> <span style="color: #dcafe9;">i</span> = <span style="color: #e69055; font-weight: bold;">1</span>; i &lt; Ntr; i++) {
   <span style="color: #51afef;">if</span> (radius &gt; turn_rad[i - <span style="color: #e69055; font-weight: bold;">1</span>] &amp;&amp; radius &lt;= turn_rad[i]) {
     <span style="color: #62686E;">// </span><span style="color: #62686E;">for(int j = 1; j &lt; Nh; j++) {</span>
     <span style="color: #62686E;">//     </span><span style="color: #62686E;">if (theta &lt; heading[j-1]) {</span>
@@ -79,8 +79,8 @@ unnecessary comments in code <br />
 </section>
 </section>
 <section>
-<section id="slide-org21ce9f6">
-<h2 id="org21ce9f6">what is <code>git</code>?</h2>
+<section id="slide-orgafb6e78">
+<h2 id="orgafb6e78">what is <code>git</code>?</h2>
 <p>
 <code>git</code> is a <b>good</b> version control tool
 </p>
@@ -93,8 +93,8 @@ it is a <i>command line utility</i> <br />
 </section>
 </section>
 <section>
-<section id="slide-org4ed4f65">
-<h2 id="org4ed4f65">installing <code>git</code></h2>
+<section id="slide-org28e29c7">
+<h2 id="org28e29c7">installing <code>git</code></h2>
 <p>
 download from <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>
 </p>
@@ -114,14 +114,14 @@ make sure to enable
 </section>
 </section>
 <section>
-<section id="slide-org7226791">
-<h2 id="org7226791">चलिए शुरू करते हैं</h2>
+<section id="slide-orgaa8323c">
+<h2 id="orgaa8323c">चलिए शुरू करते हैं</h2>
 <p>
 बिना किसी&#x2026;
 </p>
 </section>
-<section id="slide-org43380cd">
-<h3 id="org43380cd">configure Git</h3>
+<section id="slide-orgd9b7842">
+<h3 id="orgd9b7842">configure Git</h3>
 <p>
 <code>git</code> associates your name and email with every change you make
 </p>
@@ -143,10 +143,10 @@ inside a terminal:
 </div>
 
 </section>
-<section id="slide-org0ff3a28">
-<h3 id="org0ff3a28">make a new repo</h3>
+<section id="slide-org9eb4410">
+<h3 id="org9eb4410">make a new repo</h3>
 
-<div id="orgc86d39b" class="figure">
+<div id="org1e9f612" class="figure">
 <p><img src="./img/git-innit.jpeg" alt="git-innit.jpeg" />
 </p>
 </div>
@@ -164,8 +164,8 @@ step by step:
 </ol>
 
 </section>
-<section id="slide-org3baba2e">
-<h4 id="org3baba2e">repository &ldquo;repo&rdquo;</h4>
+<section id="slide-org63cfa37">
+<h4 id="org63cfa37">repository &ldquo;repo&rdquo;</h4>
 <p>
 a folder containing your code
 </p>
@@ -176,8 +176,8 @@ it stores <b>all</b> of your changes, don&rsquo;t mess with it (manually)
 </p>
 
 </section>
-<section id="slide-orge3efe9c">
-<h3 id="orge3efe9c">use an existing repo</h3>
+<section id="slide-orgc4cbd98">
+<h3 id="orgc4cbd98">use an existing repo</h3>
 <div class="org-src-container">
 
 <pre class="src src-shell">$ <span style="color: #FCCE7B;">git</span> clone <span style="color: #51afef;">[</span>path<span style="color: #51afef;">]</span>
@@ -228,18 +228,18 @@ it can also be a repository on your computer
 </section>
 </section>
 <section>
-<section id="slide-orgb58c450">
-<h2 id="orgb58c450">git commands</h2>
-<div class="outline-text-2" id="text-orgb58c450">
+<section id="slide-org47e31cf">
+<h2 id="org47e31cf">git commands</h2>
+<div class="outline-text-2" id="text-org47e31cf">
 </div>
 </section>
-<section id="slide-orgf4c4676">
-<h3 id="orgf4c4676">terminal command syntax</h3>
+<section id="slide-orgebaad2c">
+<h3 id="orgebaad2c">terminal command syntax</h3>
 <p><code class="fragment">git</code> <code class="fragment">[subcommand]</code> <code class="fragment">[options]</code></p>
 
 </section>
-<section id="slide-org9fc6614">
-<h3 id="org9fc6614">git status</h3>
+<section id="slide-org53687b6">
+<h3 id="org53687b6">git status</h3>
 <p>
 tells you the status of your repository
 </p>
@@ -249,8 +249,8 @@ tells you the status of your repository
 </p>
 
 </section>
-<section id="slide-org8fe82b7">
-<h4 id="org8fe82b7">a few important terms</h4>
+<section id="slide-orgab40e64">
+<h4 id="orgab40e64">a few important terms</h4>
 <ul class="fragment">
 <li><b>untracked</b>: new files, known to git but not <b>tracked</b></li>
 
@@ -278,8 +278,8 @@ a <b>commit</b> stores
 </ul>
 
 </section>
-<section id="slide-org0c8a8d9">
-<h4 id="org0c8a8d9">create your first commit</h4>
+<section id="slide-orgad95d4d">
+<h4 id="orgad95d4d">create your first commit</h4>
 <p>
 inside the new repo you created with <code>git init</code>, create <code>README.md</code>
 </p>
@@ -316,8 +316,8 @@ nothing added to commit but untracked files present <span style="color: #51afef;
 </div>
 
 </section>
-<section id="slide-org4504e5d">
-<h3 id="org4504e5d">git add</h3>
+<section id="slide-org6020452">
+<h3 id="org6020452">git add</h3>
 <div class="org-src-container">
 
 <pre class="src src-shell">$ <span style="color: #FCCE7B;">git</span> add README.md
@@ -340,8 +340,8 @@ changes to be committed:
 </div>
 
 </section>
-<section id="slide-org06f32f4">
-<h3 id="org06f32f4">git commit</h3>
+<section id="slide-org60d9d05">
+<h3 id="org60d9d05">git commit</h3>
 <div class="org-src-container">
 
 <pre class="src src-shell">$ <span style="color: #FCCE7B;">git</span> commit -m <span style="color: #7bc275;">"Commit message"</span>
@@ -375,8 +375,8 @@ nothing to commit, working tree clean
 </div>
 
 </section>
-<section id="slide-orgdb6c8b7">
-<h3 id="orgdb6c8b7">step by step:</h3>
+<section id="slide-org2176e38">
+<h3 id="org2176e38">step by step:</h3>
 <ol>
 <li>Create changes (add/edit/remove)</li>
 <li><code>$ git status</code></li>
@@ -393,8 +393,8 @@ nothing to commit, working tree clean
 </section>
 </section>
 <section>
-<section id="slide-org08d7fd9">
-<h2 id="org08d7fd9">when &amp; what to commit</h2>
+<section id="slide-orgf18b366">
+<h2 id="orgf18b366">when &amp; what to commit</h2>
 <p class="fragment roll-in">
 <code>git</code> is only as good as your <i>commits</i>
 </p>
@@ -441,8 +441,8 @@ commits are checkpoints, you can revert them
 Update Navbar component
 
 fixes #42
-- added border-radius
-- fixed bug around mobile view
+- add border-radius
+- fix bug around mobile view
 </pre>
 
 <p>
@@ -462,8 +462,8 @@ fixes #42
 </section>
 </section>
 <section>
-<section id="slide-org02bbfad">
-<h2 id="org02bbfad">what is Github?</h2>
+<section id="slide-org979a935">
+<h2 id="org979a935">what is Github?</h2>
 <p>
 Github is a cloud-based <code>git</code> repository hosting service
 </p>
@@ -510,8 +510,8 @@ we can:
 </p>
 
 </section>
-<section id="slide-org998d444">
-<h3 id="org998d444">create your own repository</h3>
+<section id="slide-org01ed650">
+<h3 id="org01ed650">create your own repository</h3>
 <ol>
 <li>Go to <a href="https://github.com/new">https://github.com/new</a></li>
 <li>Provide a name and description <br /></li>
@@ -525,14 +525,14 @@ we can:
 </section>
 <section>
 
-<div id="orgfcc1919" class="figure">
+<div id="org70d98f2" class="figure">
 <p><img src="./img/github-empty-repo.png" alt="github-empty-repo.png" />
 </p>
 </div>
 
 </section>
-<section id="slide-org86db525">
-<h3 id="org86db525">clone your new repo</h3>
+<section id="slide-org9368857">
+<h3 id="org9368857">clone your new repo</h3>
 <ol>
 <li>copy the <code>git</code> URL <br />
 <code>https://github.com/yourname/repo.git</code></li>
@@ -542,19 +542,21 @@ we can:
 </ol>
 
 </section>
-<section id="slide-org23ae89b">
-<h3 id="org23ae89b">connect your local repo to the remote repo</h3>
+<section id="slide-org958dd21">
+<h3 id="org958dd21">connect your local repo to the remote repo</h3>
 <p>
 inside your local repo
 </p>
 
-<p>
-<code>git remote add origin [copied_url_path]</code>
-</p>
+<div class="org-src-container">
+
+<pre class="src src-shell">$ <span style="color: #FCCE7B;">git</span> remote add origin <span style="color: #51afef;">[</span>copied_url_path<span style="color: #51afef;">]</span>
+</pre>
+</div>
 
 </section>
-<section id="slide-orga775aa5">
-<h4 id="orga775aa5">OR</h4>
+<section id="slide-orge538c67">
+<h4 id="orge538c67">OR</h4>
 <p>
 copy the contents of your local repo to the cloned repo
 </p>
@@ -573,15 +575,15 @@ the <code>.git</code> directory stores <b>ALL</b> info related to your project, 
 </p>
 
 </section>
-<section id="slide-orgf785309">
-<h3 id="orgf785309">git fetch</h3>
+<section id="slide-orge264b52">
+<h3 id="orge264b52">git fetch</h3>
 <p>
 syncs your remotes
 </p>
 
 </section>
-<section id="slide-org3655ad0">
-<h3 id="org3655ad0">git push</h3>
+<section id="slide-org3c19e67">
+<h3 id="org3c19e67">git push</h3>
 <div class="org-src-container">
 
 <pre class="src src-shell">$ <span style="color: #FCCE7B;">git</span> push -u <span style="color: #51afef;">[</span>remote<span style="color: #51afef;">]</span> <span style="color: #51afef;">[</span>branch<span style="color: #51afef;">]</span>
@@ -598,8 +600,8 @@ syncs your remotes
 </p>
 
 </section>
-<section id="slide-orgad903d9">
-<h3 id="orgad903d9">git workflow (updated):</h3>
+<section id="slide-org8011b63">
+<h3 id="org8011b63">git workflow (updated):</h3>
 <ol>
 <li><code>$ git fetch</code></li>
 <li>Create changes (add/edit/remove)</li>
@@ -612,8 +614,8 @@ syncs your remotes
 </ol>
 
 </section>
-<section id="slide-orgb0af65c">
-<h3 id="orgb0af65c">how to do <b>X</b> in Git?</h3>
+<section id="slide-org29548ff">
+<h3 id="org29548ff">how to do <b>X</b> in Git?</h3>
 <p>
 <a href="https://stackoverflow.com/search?q=how+to+do+X+in+Git">https://stackoverflow.com/search?q=how+to+do+X+in+Git</a>
 </p>
@@ -621,12 +623,12 @@ syncs your remotes
 </section>
 </section>
 <section>
-<section id="slide-orgd373c8a">
-<h2 id="orgd373c8a">Branching and Merging</h2>
+<section id="slide-orgd006de7">
+<h2 id="orgd006de7">Branching and Merging</h2>
 </section>
 <section>
 
-<div id="org598a529" class="figure">
+<div id="orge682d86" class="figure">
 <p><img src="./img/branch.svg" alt="branch.svg" class="org-svg" />
 </p>
 <p><span class="figure-number">Figure 1: </span>branches allow you to work on multiple features/fixes simultaneously</p>
@@ -647,8 +649,8 @@ syncs your remotes
 </ul>
 
 </section>
-<section id="slide-org2aaf66a">
-<h4 id="org2aaf66a">when to create branches</h4>
+<section id="slide-org8f70ef7">
+<h4 id="org8f70ef7">when to create branches</h4>
 <p>
 several approaches
 </p>
@@ -664,16 +666,16 @@ several approaches
 </section>
 </section>
 <section>
-<section id="slide-orgaf5c116">
-<h2 id="orgaf5c116">Demonstration</h2>
+<section id="slide-org3781c90">
+<h2 id="org3781c90">Demonstration</h2>
 
-<div id="orgacef236" class="figure">
+<div id="org141fd97" class="figure">
 <p><img src="./img/branching-1.png" alt="branching-1.png" />
 </p>
 </div>
 </section>
-<section id="slide-orga70fb67">
-<h4 id="orga70fb67">create new branch</h4>
+<section id="slide-org70a1fb1">
+<h4 id="org70a1fb1">create new branch</h4>
 <p>
 assuming working on some issue #53
 </p>
@@ -695,14 +697,14 @@ OR
 </section>
 <section>
 
-<div id="orgd6e6486" class="figure">
+<div id="orgdeffbd8" class="figure">
 <p><img src="./img/branching-2.png" alt="branching-2.png" />
 </p>
 </div>
 
 </section>
-<section id="slide-org98e25e5">
-<h4 id="org98e25e5">add some changes to feature &ldquo;iss53&rdquo;</h4>
+<section id="slide-orgf0354b2">
+<h4 id="orgf0354b2">add some changes to feature &ldquo;iss53&rdquo;</h4>
 <p>
 add file, commit file
 <img src="./img/branching-3.png" alt="branching-3.png" />
@@ -728,8 +730,8 @@ now there is some urgent issue, new fix required
 </p>
 
 </section>
-<section id="slide-org4aae5e0">
-<h4 id="org4aae5e0">create hotfix branch</h4>
+<section id="slide-org0b6511d">
+<h4 id="org0b6511d">create hotfix branch</h4>
 <div class="org-src-container">
 
 <pre class="src src-shell">$ <span style="color: #FCCE7B;">git</span> checkout -b hotfix
@@ -741,8 +743,8 @@ resolve bug, commit changes
 </p>
 
 </section>
-<section id="slide-orgaa3829d">
-<h4 id="orgaa3829d">bring master to hotfix</h4>
+<section id="slide-org1043596">
+<h4 id="org1043596">bring master to hotfix</h4>
 <p>
 go back to master
 </p>
@@ -790,8 +792,8 @@ continue working on <b>iss53</b>
 </div>
 
 </section>
-<section id="slide-org4ed37db">
-<h4 id="org4ed37db">issue #53 completed, let&rsquo;s merge it in master</h4>
+<section id="slide-org30825f4">
+<h4 id="org30825f4">issue #53 completed, let&rsquo;s merge it in master</h4>
 <div class="org-src-container">
 
 <pre class="src src-shell">$ <span style="color: #FCCE7B;">git</span> checkout master
@@ -799,7 +801,7 @@ $ <span style="color: #FCCE7B;">git</span> merge iss53
 </pre>
 </div>
 
-<div id="orgb6ef515" class="figure">
+<div id="orgdbf4514" class="figure">
 <p><img src="./img/merging-1.png" alt="merging-1.png" />
 </p>
 </div>
@@ -807,7 +809,7 @@ $ <span style="color: #FCCE7B;">git</span> merge iss53
 </section>
 <section>
 
-<div id="orgdd5e99b" class="figure">
+<div id="orgff51d24" class="figure">
 <p><img src="./img/merging-2.png" alt="merging-2.png" />
 </p>
 </div>
@@ -815,8 +817,8 @@ $ <span style="color: #FCCE7B;">git</span> merge iss53
 </section>
 </section>
 <section>
-<section id="slide-org3cddd96">
-<h2 id="org3cddd96">Merge Conflicts</h2>
+<section id="slide-orgeb84a8e">
+<h2 id="orgeb84a8e">Merge Conflicts</h2>
 <p>
 such pain, much wow
 </p>
